@@ -146,4 +146,15 @@ const promptIntern = async () => {
     teamMembers.push(intern);
     promptUser(); }; // prompt to add more team members
 
-    
+
+    //generate HTML using the render function :)
+function generateHTML() {
+    const html = render(teamMembers);
+    if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR);
+    } //<-- this is to check if the directory folder exists, if now then it will create one.
+
+    fs.writeFileSync(outputPath, html);
+
+    console.log("HTML file generated successfully!");
+}
