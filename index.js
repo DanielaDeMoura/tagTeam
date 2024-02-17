@@ -156,5 +156,7 @@ function generateHTML() {
 
     fs.writeFileSync(outputPath, html);
 
-    console.log("HTML file generated successfully!");
+    console.log("Team HTML file has generated successfully!");
 }
+
+promptManager();
